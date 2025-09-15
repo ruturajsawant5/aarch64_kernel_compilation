@@ -27,8 +27,13 @@ RUN apt-get update \
     gcc \
     flex \
     bison \
- && apt-get purge -y --auto-remove \
- && rm -rf /var/lib/apt/lists/*
+    vim \
+    bzip2 \
+    file \
+    cpio \
+    ipxe-qemu \
+    qemu-efi-aarch64 \
+    device-tree-compiler
 
 # Create user 'ruturaj' and give sudo without password
 RUN groupadd -r ruturaj \
